@@ -28,7 +28,7 @@ unshare () {
 }
 
 while true; do
-    WINEPREFIX=/home/amg1127/.wine-emule wine c:\\emule-latest\\emule.exe & pid=$!
+    WINEPREFIX=/home/amg1127/.wine-emule WINEARCH=win32 wine c:\\emule-latest\\emule.exe & pid=$!
     sleep 1m
     while [ -e /proc/$pid ]; do
         sleep 30
